@@ -20,6 +20,7 @@ impl Solution {
     }
 }
 
+#[allow(dead_code)]
 pub fn main() {
     let nums: Vec<i32> = vec![2, 5, 5, 11];
     let target = 10;

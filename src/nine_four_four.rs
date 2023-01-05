@@ -16,6 +16,7 @@ impl Solution {
     }
 }
 
+#[allow(dead_code)]
 pub fn main() {
     let case = vec!["qwe".to_string(), "ewq".to_string()];
 

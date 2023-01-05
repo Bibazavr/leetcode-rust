@@ -20,7 +20,7 @@ impl Solution {
     ) -> Option<Box<ListNode>> {
         match (l1, l2) {
             (None, None) => None,
-            ((Some(n), None) | (None, Some(n))) => Some(n),
+            (Some(n), None) | (None, Some(n)) => Some(n),
             (Some(n1), Some(n2)) => {
                 let sum = n1.val + n2.val;
                 if sum >= 10 {
@@ -43,6 +43,7 @@ impl Solution {
     }
 }
 
+#[allow(dead_code)]
 pub fn main() {
     let l1: Option<Box<ListNode>> = Option::from(Box::new(ListNode {
         val: 2,

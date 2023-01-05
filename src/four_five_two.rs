@@ -16,6 +16,7 @@ impl Solution {
     }
 }
 
+#[allow(dead_code)]
 pub fn main() {
     let points = vec![vec![10, 16], vec![2, 8], vec![1, 6], vec![7, 12]];
     let answer = Solution::find_min_arrow_shots(points);
