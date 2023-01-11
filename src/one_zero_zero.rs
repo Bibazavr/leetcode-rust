@@ -11,6 +11,7 @@ pub struct TreeNode {
 }
 //
 impl TreeNode {
+    #[allow(dead_code)]
     #[inline]
     pub fn new(val: i32) -> Self {
         TreeNode {
@@ -21,7 +22,6 @@ impl TreeNode {
     }
 }
 
-use std::borrow::Borrow;
 use std::cell::RefCell;
 use std::rc::Rc;
 impl Solution {

@@ -10,6 +10,7 @@ pub struct TreeNode {
 }
 
 impl TreeNode {
+    #[allow(dead_code)]
     #[inline]
     pub fn new(val: i32) -> Self {
         TreeNode {
@@ -36,6 +37,7 @@ impl Solution {
         }
         result
     }
+    #[allow(dead_code)]
     fn preorder_traversal_recurs(root: Option<Rc<RefCell<TreeNode>>>, result: &mut Vec<i32>) {
         if let Some(pnode) = root {
             let node = pnode.borrow();
