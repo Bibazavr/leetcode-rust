@@ -1,7 +1,5 @@
 // https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/description/
 
-use std::collections::{HashMap, HashSet};
-
 struct Solution;
 
 impl Solution {
