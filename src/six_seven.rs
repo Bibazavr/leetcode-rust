@@ -1,7 +1,5 @@
 // https://leetcode.com/problems/add-binary/
 
-use std::num::ParseIntError;
-
 struct Solution;
 
 impl Solution {
