@@ -4,7 +4,7 @@ struct Solution;
 
 impl Solution {
     pub fn sort_array(nums: Vec<i32>) -> Vec<i32> {
-        Self::heapSort(nums)
+        Self::heap_sort(nums)
     }
 
     pub fn heapify(nums: &mut Vec<i32>, n: usize, i: usize) {
@@ -26,8 +26,7 @@ impl Solution {
             Self::heapify(nums, n, largest);
         }
     }
-
-    pub fn heapSort(mut nums: Vec<i32>) -> Vec<i32> {
+    pub fn heap_sort(mut nums: Vec<i32>) -> Vec<i32> {
         let n = nums.len();
 
         for i in (0..n / 2).rev() {
