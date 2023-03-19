@@ -35,7 +35,6 @@ impl BrowserHistory {
 
     fn forward(&mut self, steps: i32) -> String {
         self.current_index += steps as usize;
-        self.current_index.wrapping_sub()
         if self.current_index >= self.pages.len() {
             self.current_index = self.pages.len() - 1
         }
