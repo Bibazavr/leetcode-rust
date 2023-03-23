@@ -10,13 +10,12 @@ impl Solution {
         let sum_of_series = |n: i64| n * (2 + (n - 1)) / 2;
 
         let mut i = 0;
-        let mut j = 0;
 
         while i < n {
             while i < n && nums[i] != 0 {
                 i += 1;
             }
-            j = i;
+            let j = i;
             while i < n && nums[i] == 0 {
                 i += 1;
             }
