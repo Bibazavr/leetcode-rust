@@ -1,3 +1,4 @@
+mod eight_seven;
 mod eight_seven_five;
 mod five_four_zero;
 mod five_seven;
@@ -89,6 +90,6 @@ mod two_two_six;
 mod two_zero_eight;
 
 fn main() {
-    one_four_zero_two::main();
+    eight_seven::main();
     println!("Hello world!")
 }
