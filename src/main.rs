@@ -34,6 +34,7 @@ mod nine_zero_nine;
 mod one;
 mod one_eight_five_seven;
 mod one_eight_three_three;
+mod one_eight_two_two;
 mod one_five_one_nine;
 mod one_five_seven_nine;
 mod one_five_three_nine;
@@ -123,6 +124,6 @@ mod two_zero;
 mod two_zero_eight;
 
 fn main() {
-    one_four_nine_one::main();
+    one_eight_two_two::main();
     println!("Hello world!")
 }
