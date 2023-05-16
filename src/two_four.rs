@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/swapping-nodes-in-a-linked-list/
+// https://leetcode.com/problems/swap-nodes-in-pairs/
 struct Solution;
 
 // Definition for singly-linked list.
@@ -16,44 +16,18 @@ impl ListNode {
     }
 }
 impl Solution {
-    pub fn swap_nodes(mut head: Option<Box<ListNode>>, k: i32) -> Option<Box<ListNode>> {
-        let mut len = 0;
-        let mut curr = &head;
-        let mut from_head = 0;
-
-        while let Some(node) = curr {
-            if len + 1 == k {
-                from_head = node.val;
-            }
-            curr = &node.next;
-            len += 1;
+    pub fn swap_pairs(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+        match head {
+            Some(mut node) => match node.next {
+                Some(mut next_node) => {
+                    node.next = Self::swap_pairs(next_node.next);
+                    next_node.next = Some(node);
+                    Some(next_node)
+                }
+                _ => Some(node),
+            },
+            _ => head,
         }
-
-        let mut curr = &mut head;
-        let mut i = 0;
-        let mut from_tail = 0;
-
-        while let Some(node) = curr {
-            if i + k == len {
-                from_tail = node.val;
-                node.val = from_head;
-            }
-            curr = &mut node.next;
-            i += 1;
-        }
-
-        let mut curr = &mut head;
-        i = 0;
-
-        while let Some(node) = curr {
-            if i + 1 == k {
-                node.val = from_tail;
-                return head;
-            }
-            curr = &mut node.next;
-            i += 1;
-        }
-        return head;
     }
 }
 
@@ -72,17 +46,16 @@ pub fn main() {
             })),
         })),
     }));
-    let k = 2;
     assert_eq!(
-        Solution::swap_nodes(head, k),
+        Solution::swap_pairs(head),
         Option::from(Box::new(ListNode {
-            val: 1,
+            val: 2,
             next: Option::from(Box::new(ListNode {
-                val: 4,
+                val: 1,
                 next: Option::from(Box::new(ListNode {
-                    val: 3,
+                    val: 4,
                     next: Option::from(Box::new(ListNode {
-                        val: 2,
+                        val: 3,
                         next: Option::from(Box::new(ListNode { val: 5, next: None })),
                     })),
                 })),

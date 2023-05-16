@@ -109,6 +109,7 @@ mod tow_one_four_zero;
 mod two;
 mod two_eight;
 mod two_five_eight;
+mod two_four;
 mod two_four_four_four;
 mod two_four_nine_two;
 mod two_four_seven_seven;
@@ -137,6 +138,6 @@ mod two_zero;
 mod two_zero_eight;
 
 fn main() {
-    one_seven_two_one::main();
+    two_four::main();
     println!("Hello world!")
 }
